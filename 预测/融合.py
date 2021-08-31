@@ -11,7 +11,7 @@ import zipfile
 warnings.simplefilter(action="ignore", category=pandas.errors.PerformanceWarning)
 
 姫哀预测表 = pandas.read_csv("ja.csv", header=0, names=["文章", "姫哀预测"])
-花小姐预测表 = pandas.read_csv("hxj9414.csv", header=0, names=["文章", "花小姐预测"])
+花小姐预测表 = pandas.read_csv("hxj.csv", header=0, names=["文章", "花小姐预测"])
 
 预测表 = 姫哀预测表.merge(花小姐预测表, on="文章")
 预测表["预测"] = 0.6 * 预测表.姫哀预测 + 0.4 * 预测表.花小姐预测
