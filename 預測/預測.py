@@ -184,7 +184,7 @@ for 甲 in set(測試表.日):
 
 提交表 = 預測表.loc[:, ["文章", "預測"]]
 提交表.columns = ["article_id", "orders_3h_15h"]
-提交表.to_csv("result.csv", index=False)
-壓縮档案 = zipfile.ZipFile("result.zip", mode="w")
-壓縮档案.write("result.csv")
+提交表.to_csv("ja.csv", index=False)
+壓縮档案 = zipfile.ZipFile("ja.zip", mode="w")
+壓縮档案.write("ja.csv")
 壓縮档案.close()
