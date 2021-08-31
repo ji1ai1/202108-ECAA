@@ -186,5 +186,5 @@ for 甲 in set(测试表.日):
 提交表.columns = ["article_id", "orders_3h_15h"]
 提交表.to_csv("ja.csv", index=False)
 压缩文件 = zipfile.ZipFile("ja.zip", mode="w")
-压缩文件.write("result.csv")
+压缩文件.write("ja.csv")
 压缩文件.close()
